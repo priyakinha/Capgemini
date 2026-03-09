@@ -1,0 +1,10 @@
+
+Name : Priya
+Course : Spring
+Marks: 90
+Name: Goutam
+Course: MCA
+Marks: 85
+Name: GV
+Course: MCA
+Marks: 85
