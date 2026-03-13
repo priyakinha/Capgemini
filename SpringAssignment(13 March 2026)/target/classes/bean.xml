@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<!--    Task-1-->
+
+<!--        <bean id="e" class="com.cg.bean.Employee" autowire="byName">-->
+<!--           <property name="empId" value="12345"></property>-->
+<!--            <property name="name" value="Priya"></property>-->
+<!--            <property name="salary" value="60000"></property>-->
+<!--            <property name="bu" value="PES-BU"></property>-->
+<!--            <property name="age" value="21"></property>-->
+<!--            <property name="businessUnit" ref="s"></property>-->
+<!--        </bean>-->
+
+
+<!--   Task-2 -->
+
+
+
+<!--    <bean id="s" class="com.cg.bean.SBU">-->
+<!--        <property name="sbuId" value="1"></property>-->
+<!--        <property name="sbuName" value="Product Engineering Service"></property>-->
+<!--        <property name="sbuHead" value="Kiran Rao"></property>-->
+<!--    </bean>-->
+
+
+
+<!--    Task-3-->
+
+
+
+<!--    <bean id="e1" class="com.cg.bean.Employee">-->
+<!--        <property name="empId" value="12345"></property>-->
+<!--        <property name="name" value="Priya"></property>-->
+<!--        <property name="salary" value="60000"></property>-->
+<!--        <property name="age" value="21"></property>-->
+<!--    </bean>-->
+<!--    <bean id="e2" class="com.cg.bean.Employee">-->
+<!--        <property name="empId" value="12346"></property>-->
+<!--        <property name="name" value="GV"></property>-->
+<!--        <property name="salary" value="80000"></property>-->
+<!--        <property name="age" value="25"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="s" class="com.cg.bean.SBU">-->
+<!--            <property name="sbuId" value="100"></property>-->
+<!--            <property name="sbuName" value="Product Engineering Service"></property>-->
+<!--            <property name="sbuHead" value="Kiran Rao"></property>-->
+<!--        <property name="empList">-->
+<!--            <list>-->
+<!--                <ref bean="e1"/>-->
+<!--                <ref bean="e2"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        </bean>-->
+
+
+
+<!--Through Constructor-->
+
+<!--    <bean id="e" class="com.cg.bean.Employee">-->
+
+<!--        <constructor-arg name="empId" value="12345"/>-->
+<!--        <constructor-arg name="name" value="Priya"/>-->
+<!--        <constructor-arg name="salary" value="70000"/>-->
+<!--        <constructor-arg name="bu" value="PES-BU"/>-->
+<!--        <constructor-arg name="age" value="21"/>-->
+
+<!--    </bean>-->
+
+
+
+<!--    Constructor injection using index-->
+
+<!--    <bean id="e" class="com.cg.bean.Employee">-->
+<!--        <constructor-arg index="0" value="12345"/>-->
+<!--        <constructor-arg index="1" value="Priya"/>-->
+<!--        <constructor-arg index="2" value="80000"/>-->
+<!--        <constructor-arg index="3" value="PES-BU"/>-->
+<!--        <constructor-arg index="4" value="22"/>-->
+<!--    </bean>-->
+
+
+
+<!--    Constructor injection using type-->
+
+    <bean id="e" class="com.cg.bean.Employee">
+        <constructor-arg type="int" value="12345"/>
+        <constructor-arg type="java.lang.String" value="Kinha"/>
+        <constructor-arg type="double" value="50000"/>
+        <constructor-arg type="java.lang.String" value="PES-BU"/>
+        <constructor-arg type="int" value="23"/>
+    </bean>
+
+</beans>
