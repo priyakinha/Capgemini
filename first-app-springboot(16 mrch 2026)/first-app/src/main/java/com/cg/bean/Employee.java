@@ -1,0 +1,52 @@
+package com.cg.bean;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Employee {
+    @Value("${Employee_Id}")
+    private int empid;
+    @Value("${Employee_Name}")
+    private String name;
+    //   @Autowired
+//	@Qualifier("addr")
+    private Address address;
+
+    //@Autowired ----->optional to use
+    public Employee(Address address){  //constructor injection
+        this.address=address;
+    }
+
+
+    public int getEmpid() {
+        return empid;
+    }
+    public void setEmpid(int empid) {
+        this.empid = empid;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+    public void printEmployeeDetails() {
+        System.out.println("EmployeeID: " + empid);
+        System.out.println("EmployeeName: " + name);
+        System.out.println("======ADDRESS======");
+        System.out.println("EmployeeCity: " + address.getCity());
+        System.out.println("EmployeeCountry: " + address.getCountry());
+        System.out.println("EmployeeZip: " + address.getZip());
+
+    }
+}
